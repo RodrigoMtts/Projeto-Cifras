@@ -38,7 +38,7 @@ deslocamento=
 # No final $palavra_cifrada conterá o resultado que nos interessa
 palavra_cifrada=''
 
-# Variavel que conterá os dados de entrada a serem processada
+# Variavel que conterá os dados de entrada a serem processados
 declare -l palavra_sem_cifra=''
 
 # Define LC_ALL para a charset pt_BR.UTF-8...
@@ -162,7 +162,7 @@ done
 # Correr por cada letra do texto de entrada
 for (( i=0 ; i<${#palavra_sem_cifra} ; i++ ))
 do
-    # A letra de vez é armazena em $letra por questões de legibilidade
+    # A letra da vez é armazena em $letra por questões de legibilidade
     letra="${palavra_sem_cifra:$i:1}"
 
     # Se encontrar caracteres especiais é para acresentar ele diretamente na $palavra_cifrada e pular para o próximo loop
