@@ -77,7 +77,15 @@ help="\r
 
     \tcaesarcipher.sh 12 -f arquivo.txt                         \t\t\t\t     #Cifra o texto do arquivo \n\n
 
+    \tcaesarcipher.sh 12 < arquivo.txt                         \t\t\t\t      #Cifra o texto do arquivo \n\n
+    
+    \tcat arquivo.txt | caesarcipher.sh 12                     \t\t\t\t      #Cifra o texto do arquivo \n\n
+
     \tcaesarcipher.sh 12 -f arquivo.txt texto que será cifrado  \t           #Cifra o texto do arquivo mais o texto juntos\n\n
+
+    \tcaesarcipher.sh 12 texto que será cifrado < arquivo.txt  \t            #Cifra o texto do arquivo mais o texto juntos\n\n
+
+    \tcat arquivo.txt | caesarcipher.sh 12 texto que será cifrado \t         #Cifra o texto do arquivo mais o texto juntos\n\n
 
     \tcaesarcipher.sh -d 12 fqjfa cgq eqdm ourdmpa \t\t\t                    #Decifra o texto mostrando a saída: texto que será cifrado\n\n
 
@@ -128,7 +136,7 @@ else
     erro 1
 fi
 
-# Adiciona valor da palavra_sem_cifra
+# Adiciona valor da palavra_sem_cifra via linha de comando ou arquivo após o argumento -f ou os dois
 while true ; do
     case $1 in
         #  -d | --decifrar) ainda será feito ; shift ;;
