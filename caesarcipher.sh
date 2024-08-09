@@ -116,11 +116,7 @@ help="\r
 #--------------------TESTES E ENTRADAS DE DADOS
 
 # Recebe dados pela STDIN
-if [[ -p /dev/stdin ]]
-then
-    palavra_sem_cifra=$(< /dev/stdin)
-fi
-if [[ ! -t 0 && ! -p /dev/stdin ]]
+if [[ -p /dev/stdin || ! -t 0 ]]
 then
     palavra_sem_cifra=$(< /dev/stdin)
 fi
