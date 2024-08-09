@@ -30,7 +30,7 @@ declare -i limite_entrada=100000
 caracteres_especiais='-., _@*0-9'$'\n'
 
 # Caracteres que seram aceitos como parametros de entrada
-padrao_de_entrada_aceito="-., _@0-9*a-zA-Záàâãêéíú"
+padrao_de_entrada_aceito="-., _@0-9*a-zA-Záàâãêéíú"$'\n'
 
 # Quantidade de deslocamento que será feito sobre cada letra
 deslocamento=
@@ -139,7 +139,7 @@ while true ; do
 done
 
 # Valida se os caracteres são aceitos como entrada
-[[ $palavra_sem_cifra =~ ^[$padrao_de_entrada_aceito]+$ || $palavra_sem_cifra =~ ${letra}${palavra_sem_cifra:$((i+1)):1} ]] || erro 2
+[[ $palavra_sem_cifra =~ ^[$padrao_de_entrada_aceito]+$ ]] || erro 2
 
 # Valida tamanho da entrada
 [[ ${#palavra_sem_cifra} -ge 1 && ${#palavra_sem_cifra} -le $limite_entrada  ]] || erro 3
