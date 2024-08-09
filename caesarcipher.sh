@@ -27,10 +27,10 @@
 declare -i limite_entrada=100000
 
 # Caracteres que não passaram pelo processo de cifragem, mas são aceitos e armazenados em $palavra_cifrada da forma que estão
-caracteres_especiais='-., _@*0-9'$'\n'
+caracteres_especiais=']0-9[{}()$|/\+?*.,;:" _@*'$'\n'\''-'
 
 # Caracteres que seram aceitos como parametros de entrada
-padrao_de_entrada_aceito="-., _@0-9*a-zA-Záàâãêéíú"$'\n'
+padrao_de_entrada_aceito=']0-9a-zA-Záàâãêéíóôú[{}()$|/\+?*.,;:" _@*'$'\n'\''-'
 
 # Quantidade de deslocamento que será feito sobre cada letra
 deslocamento=
