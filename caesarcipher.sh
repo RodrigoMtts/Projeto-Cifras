@@ -110,16 +110,10 @@ help="\r
 # Recebe dados pela STDIN
 if [[ -p /dev/stdin ]]
 then
-    # echo "stdin is coming from a pipe"
     palavra_sem_cifra=$(< /dev/stdin)
-fi
-if [[ -t 0 ]]
-then
-    echo "stdin is coming from the terminal"
 fi
 if [[ ! -t 0 && ! -p /dev/stdin ]]
 then
-    # echo "stdin is redirected"
     palavra_sem_cifra=$(< /dev/stdin)
 fi
 
