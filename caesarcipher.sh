@@ -38,7 +38,7 @@ deslocamento=
 # No final $palavra_cifrada conterá o resultado que nos interessa
 palavra_cifrada=''
 
-# Variavel que conterá a cifra no final
+# Variavel que conterá os dados de entrada a serem processada
 declare -l palavra_sem_cifra=''
 
 # Define LC_ALL para a charset pt_BR.UTF-8...
@@ -57,7 +57,7 @@ erro(){
     msg_erro[4]='O charset pt_BR.UTF-8 não está disponível no sistema'
     msg_erro[5]='Aquivo de entrada não encontrado'
 
-	echo ${msg_erro[$1]} 
+    echo ${msg_erro[$1]} 
     exit $1
 }
 
